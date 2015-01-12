@@ -55,8 +55,9 @@ public class View {
 	 */
 	private void initialize() {
 		
-		Checkin.add("dokimi",0);
-		Checkin[] c = Checkin.getCheckins();
+		//Checkin.add("dokimi",0);
+		//Checkin[] c = Checkin.getCheckins();
+		Packages.add(2, "ekei", "YES", "SAPIKAS");
 		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 718, 476);
