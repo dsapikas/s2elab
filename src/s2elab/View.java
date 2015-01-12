@@ -1,18 +1,15 @@
 package s2elab;
 
-import com.mysql.jdbc.*;
 
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 import java.awt.BorderLayout;
 
 import javax.swing.JTabbedPane;
 import javax.swing.JPanel;
 
-import java.awt.Button;
 
 import javax.swing.JButton;
 
@@ -20,11 +17,6 @@ import java.awt.Label;
 
 import javax.swing.JTextField;
 import javax.swing.JCheckBox;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
 
 public class View {
 
@@ -63,8 +55,7 @@ public class View {
 	 */
 	private void initialize() {
 		
-		checkin c = new checkin();
-		checkin.getcheckins();
+		checkin[] c = checkin.getcheckins();
 		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 718, 476);

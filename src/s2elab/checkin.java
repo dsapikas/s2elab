@@ -23,6 +23,7 @@ public class checkin {
 		RID = _rid;
 		place = _place;
 		datetime = _datetime;
+	
 		System.out.println("PID = " + PID + " RID = " + RID + " place = " + place + " datetime = " + datetime);
 	}
 	
@@ -35,7 +36,7 @@ public class checkin {
 			
 			Class.forName(Data.classpath);
 			conn = DriverManager.getConnection(Data.db,Data.uname,Data.passwd);
-			ResultSet rsa = conn.createStatement().executeQuery("SELECT COUNT(*) as count FROM checkins");
+			ResultSet rsa = conn.createStatement().executeQuery(Data.queryCountCheckin);
 			rsa.next();
 			
 			ch = new checkin[rsa.getInt("count")];
@@ -47,7 +48,6 @@ public class checkin {
 				checkin c = new checkin(rs.getInt("PID"),rs.getInt("RID"),rs.getString("place"),rs.getString("Date"));
 				ch[rs.getRow()-1] = c;
 			}
-			System.out.print("gamieme kai oxi to syban");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.err.println("gamithike to syban");

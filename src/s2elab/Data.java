@@ -6,4 +6,5 @@ public class Data {
 	static String uname = "root";
 	static String passwd = "";
 	static String classpath = "com.mysql.jdbc.Driver";
+	static String queryCountCheckin = "SELECT COUNT(*) as count FROM checkins";
 }
