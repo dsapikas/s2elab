@@ -30,7 +30,6 @@ public class checkin {
 	public static checkin[] getcheckins()
 	{
 		java.sql.Connection conn = null;
-		Statement stmt = null;
 		checkin ch[];
 		try {
 			
@@ -54,5 +53,20 @@ public class checkin {
 			ch = new checkin[1];
 		}
 		return ch;
+	}
+	
+	public static void add(String place, int PID)
+	{
+		java.sql.Connection conn = null;
+		try {
+			Class.forName(Data.classpath);
+			conn = DriverManager.getConnection(Data.db,Data.uname,Data.passwd);
+			String query = "Insert into checkins values (NULL,'" + place + "'," + PID + ",NULL)";
+			System.out.println(query);
+			conn.createStatement().executeUpdate(query);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.err.println("gamithike to syban");
+		}
 	}
 }
