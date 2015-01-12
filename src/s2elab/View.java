@@ -103,11 +103,11 @@ public class View {
 		fragile.setBounds(106, 235, 128, 23);
 		Worker.add(fragile);
 		
-		/*weightbox = new JTextField();
+		weightbox = new JTextField();
 		weightbox.setBounds(106, 116, 134, 28);
 		weightbox.setToolTipText("Weight");
 		Worker.add(weightbox);
-		weightbox.setColumns(10);*/
+		weightbox.setColumns(10);
 		
 		Label weight = new Label("Weight");
 		weight.setBounds(22, 116, 51, 28);
