@@ -63,23 +63,8 @@ public class View {
 	 */
 	private void initialize() {
 		
-		java.sql.Connection conn = null;
-		Statement stmt = null;
-
-		try {
-			
-			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/dadme","root","");
-			ResultSet rs = conn.createStatement().executeQuery("Select * from  packages");
-			
-			while(rs.next()){
-				System.out.println(rs.getString("address"));
-			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			System.err.println("gamithike to syban");
-			
-		}
+		checkin c = new checkin();
+		checkin.getcheckins();
 		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 718, 476);
