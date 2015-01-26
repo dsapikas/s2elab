@@ -52,7 +52,7 @@ public class Checkin {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.err.println("gamithike to syban");
+			System.err.println("Something went wrong");
 			ch = new Checkin[1];
 		}
 		return ch;
@@ -80,7 +80,7 @@ public class Checkin {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.err.println("gamithike to syban");
+			System.err.println("Something went wrong");
 			ch = new Checkin[1];
 		}
 		return ch;
@@ -97,7 +97,7 @@ public class Checkin {
 			conn.createStatement().executeUpdate(query);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.err.println("gamithike to syban");
+			System.err.println("Something went wrong");
 		}
 	}
 }

@@ -42,7 +42,7 @@ public class Packages {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.err.println("gamithike to syban");
+			System.err.println("Something went wrong");
 			pa = new Packages[1];
 		}
 		return pa;
@@ -65,7 +65,7 @@ public class Packages {
 			return rsa.getInt("ID");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.err.println("gamithike to syban");
+			System.err.println("Something went wrong");
 			return -1;
 		}
 		
