@@ -29,6 +29,7 @@ import javax.swing.JLabel;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.HashMap;
 
 public class View {
 
@@ -74,7 +75,7 @@ public class View {
 	private void initialize() {
 		
 		//Checkin.add("dokimi",0);
-		
+		Packages.getPostCodes();
 		//Packages.add(2, "ekei", "YES", "SAPIKAS");
 		//Packages[] pa = Packages.getPackages();
 		
@@ -118,9 +119,24 @@ public class View {
 		JLabel minWeight = new JLabel(Packages.Weight("MIN"));
 		minWeight.setBounds(204, 91, 125, 16);
 		Admin.add(minWeight);
+		
 		tabbedPane.addTab("Client",null, Client, null);
 		tabbedPane.addTab("Courier",null, Courier, null);
 		Courier.setLayout(null);
+		
+		//HashMap h = Packages.getHash();
+		
+		//Object[] st = h.keySet().toArray(new String[h.size()]);
+		
+		//String[] keys = (String[]) h.keySet().toArray(new String[0]);
+		//Integer[][] dt = new Integer[][]{(Integer[]) h.keySet().toArray(),""};//{ (Integer[]) .keySet().toArray(), (Integer[]) Packages.getHash().entrySet().toArray() };
+		
+		//System.out.println(st[0].toString());
+		
+		table = new JTable(Packages.strArrMap(Packages.getHash()),new String[] {"Post code","Occurs"});
+		scrollPane1 = new  JScrollPane(table);
+		scrollPane1.setBounds(19, 133, 929, 547);
+		Admin.add(scrollPane1);//*/
 		
 		textField = new JTextField();
 		textField.setBounds(503, 72, 134, 28);
