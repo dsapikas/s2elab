@@ -138,6 +138,12 @@ public class Packages {
 		
 	}
 	
+	public static String getDelivered()
+	{
+		//Not Implemented Yet
+		return "NaN";
+	}
+	
 	public static String[][] strArrMap(HashMap mp) {
 		String[][] re = new String[mp.size()][2];
 		int i = 0;

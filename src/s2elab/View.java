@@ -139,6 +139,14 @@ public class View {
 		scrollPane1.setBounds(19, 133, 929, 547);
 		Admin.add(scrollPane1);//*/
 		
+		JLabel lblDelivered = new JLabel("Delivered :");
+		lblDelivered.setBounds(453, 63, 92, 16);
+		Admin.add(lblDelivered);
+		
+		JLabel delivered = new JLabel(Packages.getDelivered());
+		delivered.setBounds(531, 63, 125, 16);
+		Admin.add(delivered);
+		
 		textField = new JTextField();
 		textField.setBounds(503, 72, 134, 28);
 		Courier.add(textField);
