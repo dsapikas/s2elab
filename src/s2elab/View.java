@@ -156,7 +156,7 @@ public class View {
 		lblPackageId.setBounds(369, 78, 90, 16);
 		Courier.add(lblPackageId);
 		
-		JButton btnNewButton = new JButton("DELIVER");
+		JButton btnNewButton = new JButton("SIGN AND RECEIVER");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CheckinsController.CheckinCtrl("Customer", Integer.parseInt(textField.getText()), "Delivered");
