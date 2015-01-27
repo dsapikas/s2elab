@@ -33,7 +33,7 @@ import java.util.HashMap;
 
 public class View {
 
-	private JFrame frame;
+	private JFrame frmDadme;
 	private JTextField weightbox;
 	private JTextField addressbox;
 	private JTextField namebox;
@@ -54,7 +54,7 @@ public class View {
 			public void run() {
 				try {
 					View window = new View();
-					window.frame.setVisible(true);
+					window.frmDadme.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -81,14 +81,15 @@ public class View {
 		
 		//System.out.print(pa[2].ID);
 		
-		frame = new JFrame();
-		frame.setBounds(100, 100, 1024, 768);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmDadme = new JFrame();
+		frmDadme.setTitle("DADME");
+		frmDadme.setBounds(100, 100, 1024, 768);
+		frmDadme.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		
 		// Panels
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		frame.getContentPane().add(tabbedPane, BorderLayout.CENTER);
+		frmDadme.getContentPane().add(tabbedPane, BorderLayout.CENTER);
 		JPanel Admin = new JPanel();
 		JPanel Client = new JPanel();
 		JPanel Courier = new JPanel();
