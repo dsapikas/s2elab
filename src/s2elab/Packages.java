@@ -138,10 +138,44 @@ public class Packages {
 		
 	}
 	
-	public static String getDelivered()
+	public static Integer getDelivered()
 	{
+		java.sql.Connection conn = null;
+		try {
+			
+			Class.forName(Data.classpath);
+			conn = DriverManager.getConnection(Data.db,Data.uname,Data.passwd);
+			ResultSet rsa = conn.createStatement().executeQuery("Select count(*) as count from checkins WHERE status = 'Delivered'");
+			rsa.next();
+			
+			return rsa.getInt("count");
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			return 0;
+		}
 		//Not Implemented Yet
-		return "NaN";
+		//return "NaN";
+	}
+	public static Integer countPackages()
+	{
+		
+		java.sql.Connection conn = null;
+		try {
+			
+			Class.forName(Data.classpath);
+			conn = DriverManager.getConnection(Data.db,Data.uname,Data.passwd);
+			ResultSet rsa = conn.createStatement().executeQuery("Select count(*) as count from packages");
+			rsa.next();
+			
+			return rsa.getInt("count");
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			return 0;
+		}
+		//Not Implemented Yet
+		//return "NaN";
 	}
 	
 	public static String[][] strArrMap(HashMap mp) {

@@ -143,9 +143,25 @@ public class View {
 		lblDelivered.setBounds(453, 63, 92, 16);
 		Admin.add(lblDelivered);
 		
-		JLabel delivered = new JLabel(Packages.getDelivered());
+		JLabel delivered = new JLabel(Packages.getDelivered().toString());
 		delivered.setBounds(531, 63, 125, 16);
 		Admin.add(delivered);
+		
+		JLabel label_5 = new JLabel(Packages.countPackages().toString());
+		label_5.setBounds(531, 34, 125, 16);
+		Admin.add(label_5);
+		
+		JLabel lblTotalPackages = new JLabel("Total Packages :");
+		lblTotalPackages.setBounds(417, 34, 102, 16);
+		Admin.add(lblTotalPackages);
+		
+		JLabel label_6 = new JLabel( new Integer(Packages.countPackages() - Packages.getDelivered()).toString());
+		label_6.setBounds(531, 91, 125, 16);
+		Admin.add(label_6);
+		
+		JLabel lblUndelivered = new JLabel("Undelivered :");
+		lblUndelivered.setBounds(437, 91, 82, 16);
+		Admin.add(lblUndelivered);
 		
 		textField = new JTextField();
 		textField.setBounds(503, 72, 134, 28);
